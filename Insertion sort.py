@@ -6,9 +6,7 @@ def insertion_sort(val):
         minimum=None
         for j in range(i,len(val)):
             if minimum is None or minimum>val[j]:
-                pos=val[i]
-                minimum=val[j]
-                val[j]=pos
-                val[i]=minimum
+                pos,minimum=val[i],val[j]
+                val[j],val[i]=pos,minimum
     return val
 print(insertion_sort(cisla))
